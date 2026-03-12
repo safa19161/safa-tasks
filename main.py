@@ -8,9 +8,12 @@ import smtplib
 import pandas
 import datetime as dt
 import random
+import os
 now =  dt.datetime.now()
-email= "eerieboom@gmail.com"
-password = "zcqyaoqybzizdpto"
+MY_EMAIL = os.environ.get("my_email")
+MY_PASSWORD = os.environ.get("my_password")
+# email= "eerieboom@gmail.com"
+# password = "zcqyaoqybzizdpto"
 
 read = pandas.read_csv("birthdays.csv")
 month = read["month"].tolist()
